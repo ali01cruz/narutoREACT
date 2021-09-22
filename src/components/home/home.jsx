@@ -11,7 +11,7 @@ export default class Home extends React.Component{
             <div className="home">
                 {this.props.charateris.map((e)=>{
                     
-                    return <Character nombre={e.nombre} ></Character> }
+                    return <Character charateris={e} ></Character> }
                 
                 )}
                 

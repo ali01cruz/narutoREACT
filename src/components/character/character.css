@@ -1,5 +1,11 @@
 .character{
-    background-color: blueviolet;
-    min-width: 300px;
+    background-color: #790095;
+    min-width: 230px;
     margin: 0.5%;
+    border-radius: 10px;
+}
+img{
+    max-width: 200px;
+    height: 196px;
+    object-fit: cover;
 }

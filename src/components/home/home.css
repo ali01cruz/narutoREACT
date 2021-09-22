@@ -1,17 +1,18 @@
 .home{
-    background-color: black;
+    background-color: #41085c6c;
     margin-top: 10px;
     height: 240px;
     display: flex;
     overflow-x: auto;
+    border-radius: 5px;
 }
 .home::-webkit-scrollbar{
-    background-color: rgba(192, 87, 17, 0.13);
+    background-color: #33031973;
     border-radius: 5px;
     color: antiquewhite;
 }
 .home::-webkit-scrollbar-thumb{
-    background-color: rgba(233, 92, 10, 0.801);
+    background-color: #330319;
     border-radius: 5px;
    
 }
