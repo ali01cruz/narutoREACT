@@ -1,0 +1,19 @@
+.navbar{
+    background-color: rgb(3, 3, 3);
+    color: aliceblue;
+    height: 120px;
+    width: 100%;
+}
+#lista{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+li{ 
+    margin:  5% 12% 12% 12%;
+    
+    list-style:none;
+}
+a{
+    text-decoration: none;
+}
