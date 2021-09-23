@@ -11,13 +11,13 @@ export default class Navbar extends React.Component{
             <div className="navbar">
                 
                 <ul id="lista">
-                    <li>
+                    <li id="a">
                        <a href="">NarutoBorion</a>
                     </li>
-                    <li>
+                    <li id="b">
                        <a href="">Descripion de Personajes</a>
                     </li>
-                    <li>
+                    <li id="c">
                        <a href="">About</a>
                     </li> 
                 </ul>
