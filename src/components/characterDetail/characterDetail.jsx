@@ -32,32 +32,32 @@ export default class CharacterDetail extends React.Component{
     }
     render(){
         return(
+            <div>
+            <select id="select" onChange={(event) => this.modificarChar(event.target.value)}>
+                {this.props.charateris.map((e)=>{
+                    return <option value={e.id}>{e.nombre}</option>
+                })}
+            </select>
             <div className="characterDetail">
                 
-                            <div className="imagen">
-                                <img src={this.state.imagen} alt="" />
-                            </div>
-                            <div className="caracteristicas">
-                                caracteristicas:
-                                <h3>Nombre: {this.state.nombre}</h3>
-                                <h3>rango: {this.state.rango}</h3>
-                                <h3>atake: {this.state.atake}</h3>
-                                <h3>aldea: {this.state.aldea}</h3>
+                <div className="imagen">
+                    <img src={this.state.imagen} alt="" />
+                </div>
+                <div className="caracteristicas">
+                    <h2>caracteristicas:</h2>
+                    <p><b>Nombre:</b> {this.state.nombre}</p>
+                    <p><b>rango:</b> {this.state.rango}</p>
+                    <p><b>atake:</b> {this.state.atake}</p>
+                    <p><b>aldea:</b> {this.state.aldea}</p>
 
-                            </div>
-                            <div className="descripcion">
-                            <h3>descripcion :{this.state.body} </h3>
+                </div>
+                <div className="descripcion">
+                <p><b>descripcion </b>:{this.state.body} </p>
 
-                            </div>
-                            <select onChange={(event) => this.modificarChar(event.target.value)}>
-                                {this.props.charateris.map((e)=>{
-                                    return <option value={e.id}>{e.nombre}</option>
-                                })}
-                            </select>
-  
-
-                        
-             
+                </div>
+                
+            </div>
+            
             </div>
         )
     }

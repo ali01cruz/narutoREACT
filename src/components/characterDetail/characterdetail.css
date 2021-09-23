@@ -5,6 +5,16 @@
     overflow-x: auto;
     border-radius: 5px;
 }
+.characterDetail::-webkit-scrollbar{
+    background-color: #33031973;
+    border-radius: 5px;
+    color: antiquewhite;
+}
+.characterDetail::-webkit-scrollbar-thumb{
+    background-color: #330319;
+    border-radius: 5px;
+   
+}
 .imagen{grid-area: imagen;}
 .caracteristicas{
     grid-area: caracteristicas;
@@ -23,4 +33,10 @@
     grid-template-areas: 
         
         "imagen  caracteristicas descripcion";
+}
+#select{
+    margin-top: 1%;
+    background-color:#330319;
+    color: antiquewhite;
+    box-shadow: 3px 3px  #e67b1696;
 }
