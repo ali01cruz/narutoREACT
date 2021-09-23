@@ -1,0 +1,26 @@
+.characterDetail{
+    background-color: #41085c6c;
+    margin-top: 10px;
+    height: 240px;
+    overflow-x: auto;
+    border-radius: 5px;
+}
+.imagen{grid-area: imagen;}
+.caracteristicas{
+    grid-area: caracteristicas;
+    text-align:start;
+    margin-left:10% ;
+}
+.descripcion{
+    grid-area: descripcion;
+    text-align:start;
+}
+    
+.characterDetail{
+    grid-template-columns:13vh 38vh auto;
+    display: grid;
+    gap:2px;
+    grid-template-areas: 
+        
+        "imagen  caracteristicas descripcion";
+}
