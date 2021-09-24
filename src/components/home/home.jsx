@@ -9,9 +9,8 @@ export default class Home extends React.Component{
     render(){
         return(
             <div className="home">
-                {this.props.charateris.map((e)=>{
-                    
-                    return <Character charateris={e} ></Character> }
+                {this.props.charateris.map((e,pos)=>{
+                    return (<Character charateris={e} key={pos} ></Character> )}
                 
                 )}
                 

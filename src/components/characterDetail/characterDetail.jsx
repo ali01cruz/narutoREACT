@@ -34,8 +34,8 @@ export default class CharacterDetail extends React.Component{
         return(
             <div>
             <select id="select" onChange={(event) => this.modificarChar(event.target.value)}>
-                {this.props.charateris.map((e)=>{
-                    return <option value={e.id}>{e.nombre}</option>
+                {this.props.charateris.map((e,pos)=>{
+                    return <option value={e.id}  key={pos}>{e.nombre}</option>
                 })}
             </select>
             <div className="characterDetail">
