@@ -41,6 +41,7 @@ export default function CharacterDetail(props){
             <select id="select" onChange={(event) => modificarChar(event.target.value)}>
                 {props.charateris.map((e)=>{
                     return <option value={e.id}>{e.nombre}</option>
+
                 })}
             </select>
             <div className="characterDetail">

@@ -35,6 +35,7 @@
         "imagen  caracteristicas descripcion";
 }
 #select{
+    padding: 5px;
     margin-top: 1%;
     background-color:#330319;
     color: antiquewhite;
