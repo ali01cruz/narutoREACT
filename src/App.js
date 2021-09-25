@@ -21,6 +21,7 @@ function App() {
                       <CharacterDetail charateris={data.Characters}></CharacterDetail>
           </Route>
           <Route exact path="/characterDetail/:id">
+                      //un ejemplo de mi linkeo es http://localhost:3000/characterDetail/1
                       <CharacterDetail charateris={data.Characters}></CharacterDetail>
           </Route>
           <Route exact path="/about">
