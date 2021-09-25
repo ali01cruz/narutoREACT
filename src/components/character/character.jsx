@@ -1,20 +1,23 @@
-import React from "react";
 import './character.css';
-export default class Character extends React.Component{
-    constructor(props){
-        super(props)
-    }
-    render(){
+import {NavLink} from "react-router-dom";
+export default function  Character(props){
+    
         return(
             <div className="character">
-                <div>
-                    <b>{this.props.charateris.nombre}</b>
+                <div> 
+                    <NavLink to={`/characterDetail/${props.charateris.id}`}>
+                        <b>{props.charateris.nombre}</b>
+
+                    </NavLink>
                 </div>
                 <div>
-                    <img src={this.props.charateris.imagen}></img>
+                    <NavLink to={`/characterDetail/${props.charateris.id}`}>
+                        <img src={props.charateris.imagen}></img>
+                    </NavLink>
+                    
                 </div>
     
             </div>
         )
-    }
+    
 }
