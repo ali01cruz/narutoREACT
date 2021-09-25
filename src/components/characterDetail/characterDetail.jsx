@@ -1,6 +1,6 @@
 import React ,{useState}from "react";
 import './characterdetail.css';
-
+import { useParams } from "react-router";
 
 export default function CharacterDetail(props){
     //trabajando
@@ -12,10 +12,11 @@ export default function CharacterDetail(props){
         imagen:"http://2.bp.blogspot.com/-ArAY7RzbwH8/VnKmuaxx1pI/AAAAAAAAC-c/TzySCHW5hk8/s1600/Kakashi_Render.png",
         body: "es el instructor del equipo 7 es el un jounin y ex ambu  con cuantiosas habilidades y alta experiensia en misiones de alto rango y muchas hailidades entre las cauels resalta su sharingan eredado de su dufinto amigo obito uchiha el cual le a permitido copiar miles de tecnicas por el cual ha ganado el nombre de ninja que copia"
     })
-  
+    const parametro = useParams();
+    const band = true;
+    console.log(parametro.id);
     //me jodio las ramas 
     const modificarChar =(e)=>{
-        console.log(e);
         
         props.charateris.find((elemeto)=>{
             if (elemeto.id==e){
@@ -36,14 +37,21 @@ export default function CharacterDetail(props){
          
     }
     
+
+        const s =(<select id="select" onChange={(event) => modificarChar(event.target.value)}>
+                        {props.charateris.map((e,pos)=>{
+                            return <option key={pos} value={e.id}>{e.nombre}</option>
+
+                        })}
+                   </select>)
+   
         return(
             <div>
-            <select id="select" onChange={(event) => modificarChar(event.target.value)}>
-                {props.charateris.map((e)=>{
-                    return <option value={e.id}>{e.nombre}</option>
-
-                })}
-            </select>
+            
+            {!parametro.id && s}
+            
+                
+            
             <div className="characterDetail">
                 
                 <div className="imagen">

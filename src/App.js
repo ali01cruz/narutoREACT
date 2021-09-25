@@ -20,6 +20,9 @@ function App() {
           <Route exact path="/characterDetail">
                       <CharacterDetail charateris={data.Characters}></CharacterDetail>
           </Route>
+          <Route exact path="/characterDetail/:id">
+                      <CharacterDetail charateris={data.Characters} ></CharacterDetail>
+          </Route>
           <Route exact path="/about">
                       <About></About>
           </Route>
