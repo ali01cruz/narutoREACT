@@ -21,7 +21,7 @@ function App() {
                       <CharacterDetail charateris={data.Characters}></CharacterDetail>
           </Route>
           <Route exact path="/characterDetail/:id">
-                      <CharacterDetail charateris={data.Characters} ></CharacterDetail>
+                      <CharacterDetail charateris={data.Characters}></CharacterDetail>
           </Route>
           <Route exact path="/about">
                       <About></About>

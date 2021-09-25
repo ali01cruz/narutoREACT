@@ -3,6 +3,8 @@ import './characterdetail.css';
 import { useParams } from "react-router";
 
 export default function CharacterDetail(props){
+
+    
     //trabajando
     const [state, SetState]  = useState({
         nombre: "kakashi hatake",
@@ -13,28 +15,30 @@ export default function CharacterDetail(props){
         body: "es el instructor del equipo 7 es el un jounin y ex ambu  con cuantiosas habilidades y alta experiensia en misiones de alto rango y muchas hailidades entre las cauels resalta su sharingan eredado de su dufinto amigo obito uchiha el cual le a permitido copiar miles de tecnicas por el cual ha ganado el nombre de ninja que copia"
     })
     const parametro = useParams();
-    const band = true;
-    console.log(parametro.id);
-    //me jodio las ramas 
-    const modificarChar =(e)=>{
-        
-        props.charateris.find((elemeto)=>{
-            if (elemeto.id==e){
-                SetState((state)=>{
-                    return {
-                    ...state,
+    //parte importante  buscar un elemento 
+    //no hacer retuurn con find
+    
+    function buscar(e){
+        return props.charateris.find((elemento)=>elemento.id==e);
+    }
+    function modificarChar(e){
+        const elemeto =buscar(e);
+       
+        SetState(({
+                    
                     nombre:elemeto.nombre,
                     rango:elemeto.rango,
                     atake:elemeto.atake,
                     aldea:elemeto.aldea,
                     imagen:elemeto.imagen,
-                    body:elemeto.body}
-                }
-                )
-            }
-        })
-        
+                    body:elemeto.body
+        })) 
          
+    }
+    //busco si el link tiene un parametro
+    if(parametro.id){
+        modificarChar(parametro.id);
+        
     }
     
 
@@ -50,7 +54,6 @@ export default function CharacterDetail(props){
             
             {!parametro.id && s}
             
-                
             
             <div className="characterDetail">
                 
@@ -58,6 +61,7 @@ export default function CharacterDetail(props){
                     <img src={state.imagen} alt="" />
                 </div>
                 <div className="caracteristicas">
+                    
                     <h2>caracteristicas:</h2>
                     <p><b>Nombre:</b> {state.nombre}</p>
                     <p><b>rango:</b> {state.rango}</p>
