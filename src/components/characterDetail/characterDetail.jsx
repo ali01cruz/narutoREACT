@@ -3,7 +3,7 @@ import './characterdetail.css';
 
 
 export default function CharacterDetail(props){
-  
+    //trabajando
     const [state, SetState]  = useState({
         nombre: "kakashi hatake",
         rango:"Ambu",
