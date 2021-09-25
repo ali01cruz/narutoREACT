@@ -1,5 +1,6 @@
 import React from "react";
 import './navbar.css';
+import {NavLink} from "react-router-dom";
 export default class Navbar extends React.Component{
     constructor(){
         super()
@@ -9,19 +10,23 @@ export default class Navbar extends React.Component{
     render(){
         return(
             <div className="navbar">
-                
-                <ul id="lista">
-                    <li id="a">
-                       <a href="">NarutoBorion</a>
-                    </li>
-                    <li id="b">
-                       <a href="">Descripion de Personajes</a>
-                    </li>
-                    <li id="c">
-                       <a href="">About</a>
-                    </li> 
-                </ul>
+
+                    <nav>
+                        <ul id="lista">
+                            <li>
+                                <NavLink exact to="/">NarutoBorion</NavLink>
+                            </li>
+                            <li>
+                                <NavLink exact to="/characterDetail">Descripion de Personajes</NavLink>
+                            </li>
+                            <li>
+                                <NavLink exact to="/about">About</NavLink>
+                            </li> 
+                        </ul>
+                    </nav>
+
             </div>
+
         )
     }
 }
