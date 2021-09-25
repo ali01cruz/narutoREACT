@@ -13,7 +13,7 @@ export default function CharacterDetail(props){
         body: "es el instructor del equipo 7 es el un jounin y ex ambu  con cuantiosas habilidades y alta experiensia en misiones de alto rango y muchas hailidades entre las cauels resalta su sharingan eredado de su dufinto amigo obito uchiha el cual le a permitido copiar miles de tecnicas por el cual ha ganado el nombre de ninja que copia"
     })
   
-    
+    //me jodio las ramas 
     const modificarChar =(e)=>{
         console.log(e);
         
