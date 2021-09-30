@@ -4,6 +4,7 @@ import Navbar from './components/navbar/navbar.jsx';
 import Home from './components/home/home';
 import data from './resources/data.json'
 import CharacterDetail from './components/characterDetail/characterDetail';
+import CharacterDetail2 from './components/characterDetail/characterDetail2'
 import About from './components/about/about';
 
 import {Switch,Route} from "react-router-dom";
@@ -21,8 +22,7 @@ function App() {
                       <CharacterDetail charateris={data.Characters}></CharacterDetail>
           </Route>
           <Route exact path="/characterDetail/:id">
-                      //un ejemplo de mi linkeo es http://localhost:3000/characterDetail/1
-                      <CharacterDetail charateris={data.Characters}></CharacterDetail>
+                      <CharacterDetail2 charateris={data.Characters}></CharacterDetail2>
           </Route>
           <Route exact path="/about">
                       <About></About>
