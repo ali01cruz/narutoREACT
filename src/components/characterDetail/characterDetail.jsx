@@ -24,7 +24,7 @@ export default function CharacterDetail(props){
     function modificarChar(e){
         const elemeto =buscar(e);
        
-        SetState(({
+        SetState({
                     
                     nombre:elemeto.nombre,
                     rango:elemeto.rango,
@@ -32,9 +32,10 @@ export default function CharacterDetail(props){
                     aldea:elemeto.aldea,
                     imagen:elemeto.imagen,
                     body:elemeto.body
-        })) 
+        }) 
          
     }
+    //la otra opcion es modificar con id osea array[id]
     //busco si el link tiene un parametro
     if(parametro.id){
         modificarChar(parametro.id);
