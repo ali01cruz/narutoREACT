@@ -25,3 +25,8 @@ a{
     font-family:'Times New Roman', Times, serif;
     font-variant: small-caps;
 }
+.active{
+    padding: 3.5;
+    border-radius: 2px;
+    box-shadow: 1px 1px 8px 8px   rgba(228, 215, 32, 0.192);
+}

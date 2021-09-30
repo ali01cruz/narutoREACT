@@ -6,16 +6,19 @@ import data from './resources/data.json'
 import CharacterDetail from './components/characterDetail/characterDetail';
 import CharacterDetail2 from './components/characterDetail/characterDetail2'
 import About from './components/about/about';
-
+import { useEffect } from "react";
 import {Switch,Route} from "react-router-dom";
 
 function App() {
+  useEffect( ()=> {
+    console.log("App Montada")
+  },[])
   return (
     <div className="App">
         <Navbar ></Navbar>
 
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/" >
                       <Home charateris={data.Characters}></Home>
           </Route>
           <Route exact path="/characterDetail">
@@ -27,6 +30,11 @@ function App() {
           <Route exact path="/about">
                       <About></About>
           </Route>
+
+          <Route>
+              <h1> PAG NOT FOUND 404</h1>
+          </Route>
+
         </Switch>
       
 
