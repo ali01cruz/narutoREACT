@@ -1,6 +1,6 @@
 
 import './App.css';
-import Navbar from './components/navbar/navbar.jsx';
+import NavbarM from './components/navbar/navbar.jsx';
 import Home from './components/home/home';
 import data from './resources/data.json'
 import CharacterDetail from './components/characterDetail/characterDetail';
@@ -15,7 +15,7 @@ function App() {
   },[])
   return (
     <div className="App">
-        <Navbar ></Navbar>
+        <NavbarM ></NavbarM>
 
         <Switch>
           <Route exact path="/" >

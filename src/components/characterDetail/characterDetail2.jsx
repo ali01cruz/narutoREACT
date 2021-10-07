@@ -5,7 +5,7 @@ import { useParams } from "react-router";
 export default function CharacterDetail2(props){
     const parametro = useParams();
 
-    const elemeto =props.charateris.find((elemento)=>elemento.id==parametro.id);
+    const elemeto =props.charateris.find((elemento)=>elemento.id===parseInt(parametro.id));
 
     //la otra opcion es modificar con id osea array[id]
     //busco si el link tiene un parametro

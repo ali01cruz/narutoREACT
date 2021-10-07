@@ -1,6 +1,6 @@
 import React ,{useState}from "react";
 import './characterdetail.css';
-import { useParams } from "react-router";
+
 
 export default function CharacterDetail(props){
 
@@ -16,7 +16,7 @@ export default function CharacterDetail(props){
     })
     
     function buscar(e){
-        return props.charateris.find((elemento)=>elemento.id==e);
+        return props.charateris.find((elemento)=>elemento.id===parseInt(e));
     }
     function modificarChar(e){
         const elemeto =buscar(e);

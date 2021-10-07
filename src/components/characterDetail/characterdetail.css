@@ -4,6 +4,7 @@
     height: 240px;
     overflow-x: auto;
     border-radius: 5px;
+    color: rgba(255, 248, 220, 0.746); 
 }
 .characterDetail::-webkit-scrollbar{
     background-color: #33031973;
@@ -24,6 +25,7 @@
 .descripcion{
     grid-area: descripcion;
     text-align:start;
+    
 }
     
 .characterDetail{

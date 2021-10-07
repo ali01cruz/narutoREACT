@@ -1,10 +1,4 @@
-.about{
-    background-color: rgba(3, 3, 3, 0.541);
-    color: rgba(240, 248, 255, 0.26);
-    height: 100px;
-    width: 100%;
-    
-}
-h3{
-    padding-top: 1%;
+.texto{
+    color: rgba(255, 248, 220, 0.774);
+    margin-top:100px;
 }

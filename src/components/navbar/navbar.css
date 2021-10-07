@@ -1,32 +1,4 @@
-.navbar{
-    background-color: rgb(3, 3, 3);
-    color: aliceblue;
-    height: 120px;
-    width: 100%;
-}
-#lista{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
-li{ 
-    margin:  3% 10% 10% 10%;
-    background-color: rgb(88, 32, 192);
-    list-style:none;
-    padding: 0.5%;
-    border-radius: 6px;
-    box-shadow: 1px 1px 4px 4px   rgba(255, 255, 0, 0.534);
-    
-}
-a{
-    text-decoration: none;
-    color: rgba(240, 248, 255, 0.794);
-    font-weight: bold;
-    font-family:'Times New Roman', Times, serif;
-    font-variant: small-caps;
-}
 .active{
-    padding: 3.5;
-    border-radius: 2px;
-    box-shadow: 1px 1px 8px 8px   rgba(228, 215, 32, 0.192);
+    background-color: rgba(154, 173, 224, 0.246);
+    border-radius: 5px;
 }
