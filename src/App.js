@@ -8,10 +8,15 @@ import CharacterDetail2 from './components/characterDetail/characterDetail2'
 import About from './components/about/about';
 import { useEffect } from "react";
 import {Switch,Route} from "react-router-dom";
+import { useState } from 'react';
+
+
 
 function App() {
+  const [datos,setDatos] = useState(data.Characters);
   useEffect( ()=> {
     console.log("App Montada")
+    setDatos(data.Characters);
   },[])
   return (
     <div className="App">
@@ -19,13 +24,13 @@ function App() {
 
         <Switch>
           <Route exact path="/" >
-                      <Home charateris={data.Characters}></Home>
+                      <Home charateris={datos}></Home>
           </Route>
           <Route exact path="/characterDetail">
-                      <CharacterDetail charateris={data.Characters}></CharacterDetail>
+                      <CharacterDetail charateris={datos}></CharacterDetail>
           </Route>
           <Route exact path="/characterDetail/:id">
-                      <CharacterDetail2 charateris={data.Characters}></CharacterDetail2>
+                      <CharacterDetail2 charateris={datos}></CharacterDetail2>
           </Route>
           <Route exact path="/about">
                       <About></About>
